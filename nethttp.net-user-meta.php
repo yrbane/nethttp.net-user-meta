@@ -2,10 +2,16 @@
 
 /**
  * Plugin Name: nethttp.net-user-meta
- * Description: User Meta is simple way to store some additional data to users'profile. 
+ * Plugin URI: https://github.com/yrbane/nethttp.net-user-meta
+ * Description: User Meta is a Wordpress plugin whitch is a simple way to store some additional data to users'profile. 
  * Version: 0.0.1
- * Author: yrbane@nethttp.net
- * Tag: base plugin
+ * Author: Barney <yrbane@nethttp.net>
+ * Author URI: https://github.com/yrbane
+ * Requires PHP: 7.4
+ * Text Domain: default
+ * License: GPLv3
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
+ * Domain Path:       /languages
  */
 
 namespace nethttp;
@@ -57,7 +63,7 @@ class User_Meta
 
     /**
      * Function to display the form field for user meta.
-     * @param object $user The user whose profile is being edited.
+     * @param \WP_User $user The user whose profile is being edited.
      */
     public function form_field($user)
     {
@@ -104,6 +110,7 @@ class User_Meta
 
     /**
      * Function to add styles and scripts to the WordPress admin panel.
+     * @param string $hook The current admin page.
      */
     public function styles_and_scripts($hook)
     {
